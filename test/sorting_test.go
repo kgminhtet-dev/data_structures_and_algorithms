@@ -21,4 +21,13 @@ func TestSorting(t *testing.T) {
 			}
 		}
 	})
+
+	t.Run("Selection Sort", func(t *testing.T) {
+		for _, tc := range testcases {
+			result := day3.SelectionSort(tc)
+			if !isArraySorted(result) {
+				t.Errorf("Result should be sorted %v", result)
+			}
+		}
+	})
 }

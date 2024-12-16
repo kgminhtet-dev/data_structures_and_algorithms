@@ -1,6 +1,6 @@
 package day3
 
-func bubbleSort(input []int) []int {
+func BubbleSort(input []int) []int {
 	if len(input) == 0 || len(input) == 1 {
 		return input
 	}

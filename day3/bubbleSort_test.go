@@ -6,7 +6,6 @@ import (
 )
 
 func TestBubbleSort(t *testing.T) {
-
 	testcases := []struct {
 		input    []int
 		expected []int
@@ -20,7 +19,7 @@ func TestBubbleSort(t *testing.T) {
 	}
 
 	for _, tc := range testcases {
-		result := bubbleSort(tc.input)
+		result := BubbleSort(tc.input)
 		if !reflect.DeepEqual(result, tc.expected) {
 			t.Errorf("Expected %v, but got %v\n", tc.expected, result)
 		}

@@ -1,5 +1,15 @@
 package test
 
+import "math/rand"
+
+func generateRandomArray(n int) []int {
+	arr := make([]int, n)
+	for i := 0; i < n; i++ {
+		arr[i] = rand.Intn(100)
+	}
+	return arr
+}
+
 func isArraySorted(arr []int) bool {
 	if len(arr) == 0 || len(arr) == 1 {
 		return true

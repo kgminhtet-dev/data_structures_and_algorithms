@@ -6,12 +6,11 @@ import (
 )
 
 func TestSorting(t *testing.T) {
-	testcases := [][]int{
-		[]int{1, 2, 3, 4, 5},
-		[]int{5, 4, 3, 2, 1},
-		[]int{1, 1, 1, 1, 1},
-		[]int{1},
-		[]int{},
+	size := 20
+	testcases := make([][]int, 5)
+
+	for i := range testcases {
+		testcases[i] = generateRandomArray(size)
 	}
 
 	t.Run("Bubble Sort", func(t *testing.T) {
